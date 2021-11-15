@@ -1,0 +1,144 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --color-main-txt: rgb(56, 56, 56);
+  --color-paragraph: rgb(82, 82, 82);
+  --border-radius-desktop: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem will then be equal to 10px */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: var(--color-main-txt);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pale-blue);
+  background-image: url(img/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  font-weight: 500;
+}
+
+main {
+  overflow: hidden;
+  border-radius: var(--border-radius-desktop);
+  background-color: white;
+  width: 35rem;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--color-paragraph);
+}
+
+button {
+  width: 100%;
+  border: 0;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.summary-ctn {
+  text-align: center;
+  padding: 3rem;
+}
+
+h1,
+.sub-txt,
+.plan-section,
+.btn-main {
+  margin-bottom: 2rem;
+}
+
+.plan-section {
+  display: flex;
+  border-radius: var(--border-radius-desktop);
+  background-color: var(--very-pale-blue);
+  padding: 1.6rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-ctn {
+  margin-left: 1.3rem;
+}
+
+.music-annual-ctn {
+  display: flex;
+  align-items: center;
+}
+
+.plan-ctn__heading {
+  font-weight: 700;
+}
+
+.plan-section__change {
+  color: var(--bright-blue);
+  text-decoration: underline;
+}
+
+.btn-main {
+  background-color: var(--bright-blue);
+  color: white;
+  border-radius: var(--border-radius-desktop);
+  padding: 1.6rem 0;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.btn-sec {
+  background: transparent;
+  color: inherit;
+}
+
+button,
+.plan-section__change {
+  transition: transform 0.2s;
+  cursor: pointer;
+  backface-visibility: hidden;
+}
+
+button:hover,
+.plan-section__change:hover {
+  transform: scale(1.1);
+}
+
+button:active,
+.plan-section__change:active {
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 375px) {
+  * {
+    font-size: 56.25%; /* 9px */
+  }
+
+  body {
+    background-image: url(img/pattern-background-mobile.svg);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
